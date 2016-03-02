@@ -1,0 +1,52 @@
+html, body
+  font-family: 'Roboto Mono', monospace
+  padding: 0px
+  margin: 0px
+  width: 100%
+  height: 100%
+  overflow: hidden
+  font-weight: bold
+  color: #FFF
+
+#camera
+  width: 100%
+  height: auto
+
+
+@mixin icon($t, $r)
+  text-shadow: 1px 1px 1px #000
+  cursor: pointer
+  position: absolute
+  top: $t
+  right: $r
+  font-size: 18px
+  opacity: 0.45
+  &:hover
+    opacity: 0.75
+
+@mixin icon-bottom($t, $r)
+  text-shadow: 1px 1px 1px #000
+  cursor: pointer
+  position: absolute
+  bottom: $t
+  left: $r
+  font-size: 24px
+  opacity: 0.45
+  &:hover
+    opacity: 0.75
+
+#download
+  @include icon(30px, 20px)
+
+#flip
+  @include icon-bottom(45px, 40px)
+
+#mirror
+  @include icon-bottom(45px, 70px)
+  transform: rotate(90deg)
+
+#brightness
+  @include icon-bottom(45px, 120px)
+
+#contrast
+  @include icon-bottom(45px, 150px)
